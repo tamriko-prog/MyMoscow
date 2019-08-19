@@ -1,0 +1,126 @@
+.slider{
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides{
+    display: flex;
+    align-items: flex-start;
+    overflow: hidden;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+.slides > li  {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.slider-nav{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    border: 2px solid rgb(100, 113, 230);
+    border-radius: 50%;
+    z-index: 99999;
+    top: calc(50% - 25px);  
+    cursor: pointer;
+}
+
+.slider-nav-vertical{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    z-index: 99999;
+    left: calc(50% - 25px);  
+    cursor: pointer;
+}
+
+.slider:hover .slider-prev{
+    left: 50px;
+}
+
+.slider:hover .slider-next{
+    right: 50px;
+}
+
+.slider:hover .slider-up{
+    top: 50px;
+}
+
+.slider:hover .slider-down{
+    bottom: 50px;
+}
+
+.slider-prev{
+    left: -50px;
+    background-image: url('../img/icons/arrow1.png');
+    transform: rotate(180deg);
+    transition: left 0.3s ease-in-out;
+}
+
+.slider-next{
+    right: -50px;
+    background-image: url('../img/icons/arrow1.png');
+    transition: right 0.3s ease-in-out;
+}
+
+
+.control-nav-horizontal{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    z-index: 99;
+}
+
+.control-nav-element{
+    border-radius: 50%;
+    background-image: url('../img/icons/point.png');
+    background-position:  center center;
+    background-size: cover;
+    width: 15px;
+    height: 15px;
+    margin: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+.control-nav-element:hover{
+    border: 2px solid white;
+}
+
+.control-nav-element-active{
+    border: 2px solid white;
+}
+
+
+.control-nav-element1{
+    border-radius: 50%;
+    background-color: rgb(217, 217, 235);
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    cursor: pointer;
+    transition: border 0.3s ease-in-out;
+}
+
+.control-nav-element1:hover{
+    background-color: white;
+    border: 2px solid rgb(100, 113, 230);
+}
+
+.control-nav-element1-active{
+    background-color: white;
+    border: 2px solid rgb(100, 113, 230);
+}
+
+
+.carousel > .slides > li{
+    margin: 5px;
+    cursor: pointer;
+}
